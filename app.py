@@ -34,7 +34,7 @@ def download_yolo_weights():
 download_yolo_weights()
 
 # Load YOLO model
-net = cv2.dnn.readNet("yolov3.weights", "yolov3.cfg")
+net = cv2.dnn.readNet(weights_path, "yolov3.cfg")
 layer_names = net.getLayerNames()
 output_layers = [layer_names[i - 1] for i in net.getUnconnectedOutLayers()]
 
